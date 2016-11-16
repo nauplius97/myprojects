@@ -1,0 +1,1 @@
+R scripts of Project1 of all statistical analyses
