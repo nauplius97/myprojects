@@ -1,0 +1,9 @@
+{
+    "path" : "~/myprojects/project1/scripts",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
