@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"testmarkdown\"\nauthor: \"David Costalago\"\ndate: \"16 november 2016\"\noutput:\n  html_document: default\n  word_document: default\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\n```\n\n## R Markdown\n\nThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.\n\nWhen you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\n```{r}\nraw_data_file <- 'http://ecology.msu.montana.edu/labdsv/R/labs/lab1/bryceveg.R' # relative to where the .Rmd file is!\ndata <- read.table(raw_data_file,header=TRUE,row.names=1)\nhead(data)\n```\n</details>\n<br />\n\n#### :computer: Add code to do some analysis and plots of the data\n<details markdown=\"1\">\n<summary>:key: Click to see hints</summary>\n* Insert chunks with some relevant code, e.g.:\n\n## Including Plots\n\nYou can also embed plots, for example:\n\n```{r}\n# to get number of presences for each species.\n# Note that the first part of the function\n# call (veg>0) evaluates to TRUE/FALSE or 1/0),\n# and it is the sum of ones and zeros that\n# gets calculated.\n#spc_pres<-apply(veg>0,2,sum)\n\n# to see a plot of the cumulative empirical density\n# function (CEDF) for species presences\nplot(data$taroff)\n```\n\n\n* _Example code taken from [http://ecology.msu.montana.edu/labdsv/R/labs/lab1/lab1.html#Introduction](http://ecology.msu.montana.edu/labdsv/R/labs/lab1/lab1.html#Introduction)_\n</details>\n<br />\n\n#### :computer: Make git ignore html output from R notebooks, and commit the notebook\nThe html output files are big and generated automatically when the notebook file is saved, so it's not necessary to have it in the repository\n<details markdown=\"1\">\n<summary>:key: Click to see hints</summary>\n* Add `*.nb.html` to .gitignore\n* Decide if you want to add and commit the dataset file to the repository, or not\n* Commit and push\n* _You might have noticed that there is support for git in RStudio – check this out and play around with it_\n</details>\n<br />\n\n\n### Extra\n\n#### :computer: Break out some code and put it in a separate .R file in an appropriate place\n\n#### :computer: Call the external code from the notebook\n",
+    "created" : 1479300326141.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "485219120",
+    "id" : "1E623168",
+    "lastKnownWriteTime" : 1479301007,
+    "last_content_update" : 1479301007694,
+    "path" : "~/myprojects/project1/scripts/testmarkdown.Rmd",
+    "project_path" : "testmarkdown.Rmd",
+    "properties" : {
+        "last_setup_crc32" : "9B6C7D45bb338d19",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
