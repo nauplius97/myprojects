@@ -1,0 +1,71 @@
+---
+title: "testmarkdown"
+author: "David Costalago"
+date: "16 november 2016"
+output:
+  html_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+raw_data_file <- 'http://ecology.msu.montana.edu/labdsv/R/labs/lab1/bryceveg.R' # relative to where the .Rmd file is!
+data <- read.table(raw_data_file,header=TRUE,row.names=1)
+head(data)
+```
+</details>
+<br />
+
+#### :computer: Add code to do some analysis and plots of the data
+<details markdown="1">
+<summary>:key: Click to see hints</summary>
+* Insert chunks with some relevant code, e.g.:
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r}
+# to get number of presences for each species.
+# Note that the first part of the function
+# call (veg>0) evaluates to TRUE/FALSE or 1/0),
+# and it is the sum of ones and zeros that
+# gets calculated.
+#spc_pres<-apply(veg>0,2,sum)
+
+# to see a plot of the cumulative empirical density
+# function (CEDF) for species presences
+plot(data$taroff)
+```
+
+
+* _Example code taken from [http://ecology.msu.montana.edu/labdsv/R/labs/lab1/lab1.html#Introduction](http://ecology.msu.montana.edu/labdsv/R/labs/lab1/lab1.html#Introduction)_
+</details>
+<br />
+
+#### :computer: Make git ignore html output from R notebooks, and commit the notebook
+The html output files are big and generated automatically when the notebook file is saved, so it's not necessary to have it in the repository
+<details markdown="1">
+<summary>:key: Click to see hints</summary>
+* Add `*.nb.html` to .gitignore
+* Decide if you want to add and commit the dataset file to the repository, or not
+* Commit and push
+* _You might have noticed that there is support for git in RStudio – check this out and play around with it_
+</details>
+<br />
+
+
+### Extra
+
+#### :computer: Break out some code and put it in a separate .R file in an appropriate place
+
+#### :computer: Call the external code from the notebook
